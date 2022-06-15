@@ -1,0 +1,361 @@
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header img {
+  height: 60px;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+  line-height: 100px;
+}
+
+header ul li {
+  height: 100%;
+  margin-left: 20px;
+  color: hsl(209deg, 98%, 49%);
+  border-bottom: 5px solid transparent;
+  text-transform: uppercase;
+}
+
+header ul li:hover {
+  border-bottom: 5px solid hsl(209deg, 98%, 49%);
+}
+
+.foot {
+  height: 300px;
+  background-image: url("/img/footer-bg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.foot .left {
+  display: flex;
+  gap: 20px;
+}
+
+.foot .left h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.foot .left ul {
+  margin-bottom: 20px;
+}
+
+.foot .left ul li {
+  font-size: smaller;
+  color: hsl(182deg, 14%, 44%);
+}
+
+.foot img {
+  width: 450px;
+}
+
+.media {
+  height: 70px;
+  background-color: hsl(0deg, 0%, 19%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.media button {
+  padding: 10px;
+  background-color: hsl(0deg, 0%, 19%);
+  font-size: larger;
+  color: white;
+  border: 3px solid hsl(209deg, 98%, 49%);
+  text-transform: uppercase;
+}
+
+.media .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.media .right p {
+  font-size: larger;
+  color: hsl(182deg, 14%, 44%);
+  font-weight: bolder;
+}
+
+.media .right img {
+  width: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: roboto, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.card {
+  width: 150px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
+}
+
+.card p {
+  color: white;
+  text-transform: uppercase;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 11%);
+}
+
+main .jumbo {
+  height: 400px;
+  background-image: url("/img/jumbotron.jpg");
+  background-size: cover;
+}
+
+main .box {
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+main .box .current {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  padding: 10px;
+  font-size: larger;
+  text-transform: uppercase;
+  background-color: hsl(209deg, 98%, 49%);
+  color: white;
+}
+
+main .box button {
+  padding: 10px;
+  font-size: large;
+  border: 0px;
+  text-transform: uppercase;
+  background-color: hsl(209deg, 98%, 49%);
+  color: white;
+}
+
+main .info {
+  height: 150px;
+  background-color: hsl(209deg, 98%, 49%);
+}
+
+main .info p {
+  text-align: center;
+}
+
+main .info ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .info ul li {
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: hsl(209deg, 98%, 49%);
+  color: white;
+}
+
+main .info ul li p {
+  line-height: 150px;
+  margin-left: 5px;
+}
+
+main .info ul li img {
+  width: 40px;
+}
+
+.super {
+  background-color: white;
+}
+
+.super .sep {
+  height: 50px;
+  position: relative;
+  background-color: hsl(209deg, 98%, 49%);
+}
+
+.super .sep img {
+  height: 250px;
+  position: absolute;
+  bottom: 25px;
+  left: 200px;
+}
+
+.super .info {
+  background-color: lightgray;
+  height: auto;
+}
+
+.super .info ul {
+  border: 1px solid grey;
+  height: 50px;
+  align-items: stretch;
+}
+
+.super .info li {
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 10px;
+  color: grey;
+  background-color: lightgray;
+  height: auto;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  margin-left: 0px;
+  padding: 0px 10px;
+}
+
+.super .info li p {
+  line-height: normal;
+}
+
+.super .info li img {
+  align-self: center;
+  height: 30px;
+  width: auto;
+}
+
+.super .top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.super .top .desc {
+  width: 35%;
+}
+
+.super .top .right {
+  height: 100%;
+}
+
+.super .top .right .top-img {
+  font-size: large;
+  color: grey;
+  text-transform: uppercase;
+}
+
+.super .top .right img {
+  height: 70%;
+}
+
+.super .top .diff {
+  background-color: limegreen;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid green;
+  height: 30px;
+  margin: 20px 0;
+}
+
+.super .top .diff div {
+  height: 100%;
+  border-right: 1px solid green;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.super .top .diff span {
+  color: lime;
+}
+
+.super .top .story {
+  color: lightgray;
+  font-size: small;
+}
+
+.super .plus {
+  height: 450px;
+  background-color: lightgrey;
+}
+
+.super .flexer-big {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  gap: 30px;
+  padding: 15px;
+  font-size: small;
+}
+
+.super .flexer-big .width-diff {
+  width: 40%;
+}
+
+.super .flexer-big .width-diff h3 {
+  margin: 20px 0;
+}
+
+.super .flexer-big .width-diff .width-diff-two {
+  width: 70%;
+}
+
+.super .flexer-big .width-diff .divider {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+}
+
+.super .flexer-big .width-diff .divider a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.super .flexer-big .width-diff .padding-diff {
+  padding-right: 50px;
+}
+
