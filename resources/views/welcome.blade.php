@@ -10,12 +10,17 @@
       <div class="card">
         <img src="{{ $comic['thumb'] }}" alt="type">
         <p>{{$comic['title']}}</p>
-        <button><a href="{{route('show', $comic->id)}}">Info</a></button>
-        <button><a href="{{route('delete', $comic->id)}}">Cancella</a></button>
+        <button><a href="{{route('comics.show', $comic->id)}}">Info</a></button>
+        <form action='{{ route('comics.destroy', $comic->id) }}' method="POST">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger m-2">Elimina</button>
+      </form>
       </div>
       @endforeach
-      <button>load more</button>
     </div>
+    <button>load more</button>
+    <button><a href="{{route('comics.create', $comic->id)}}">crea</a></button>
 
     <div class="info">
       <ul>

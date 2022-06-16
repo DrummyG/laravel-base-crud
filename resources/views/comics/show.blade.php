@@ -17,6 +17,8 @@
                     <p>Check Availability</p>
                 </div>
                 <p class="story">{{$comic->description}}</p>
+                <button><a href="{{route('comics.edit', $comic->id)}}">Modifica</a></button>
+                <button><a href="{{route('home')}}">Torna alla home</a></button>
                 </div>
                 <div class="right">
                     <p class="top-img">advertisement</p>

@@ -26,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-
+        return view('comics.create');
     }
 
     /**
@@ -37,7 +37,13 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+      
+        $newComic = Comic::create($data);
+
+        $newComic->save();
+        
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**
@@ -46,12 +52,12 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
+        // $comic = Comic::find($id);
         $menu = config('menu');
         if($comic){
-            return view('show', compact('comic'), ['menu' => $menu]);
+            return view('comics.show', compact('comic'), ['menu' => $menu]);
         }
         abort(404);
     }
@@ -63,9 +69,19 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit',compact('comic'));
+    }
+
+    public function warn(Comic $comic)
+    {
+        // $comic = Comic::find($id);
+        $menu = config('menu');
+        if($comic){
+            return view('comics.warn', compact('comic'), ['menu' => $menu]);
+        }
+        abort(404);
     }
 
     /**
@@ -75,9 +91,14 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic->id);
+       
     }
 
     /**
@@ -90,6 +111,6 @@ class ComicController extends Controller
     {
         $comic = Comic::findOrFail($id);
         $comic->delete();
-        return redirect()->route('welcome');
+        return redirect()->route('home');
     }
 }

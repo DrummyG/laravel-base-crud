@@ -12,11 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Comic;
 
 Route::get('/', 'ComicController@index')->name('home');
 
-Route::get('/show', 'ComicController@show')->name('show');
+Route::resource('comics', 'ComicController');
 
-Route::get('/delete', function () {
-    return view('delete');
-})->name('delete');
+// Route::get('/delete', 'ComicController@warn')->name('delete');
+
+// Route::get('/show', 'ComicController@show')->name('show');
+
+// Route::get('/delete', function () {
+//     $comic = Comic::findOrFail($id);
+//     return view('delete', compact('comic'));
+// })->name('delete');

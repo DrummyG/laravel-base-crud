@@ -3,7 +3,7 @@
 
     <ul>
       <li>characters</li>
-      <li><a href="{{route('show')}}">comics</a></li>
+      <li>comics</li>
       <li>movie</li>
       <li>tv</li>
       <li>games</li>
