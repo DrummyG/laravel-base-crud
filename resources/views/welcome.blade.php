@@ -10,6 +10,8 @@
       <div class="card">
         <img src="{{ $comic['thumb'] }}" alt="type">
         <p>{{$comic['title']}}</p>
+        <button><a href="{{route('show', $comic->id)}}">Info</a></button>
+        <button><a href="{{route('delete', $comic->id)}}">Info</a></button>
       </div>
       @endforeach
       <button>load more</button>

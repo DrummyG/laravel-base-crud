@@ -3,22 +3,20 @@
 @section('content')
 <main class="super">
     <div class="jumbo"></div>
-    @foreach ($comics as $comic)
-        @if ($loop -> first)
             <div class="sep">
-                <img src="{{$comic['thumb']}}" alt="">
+                <img src="{{$comic->thumb}}" alt="">
             </div>
             <div class="top">
             <div class="desc">
-                <h2>{{$comic['title']}}</h2>
+                <h2>{{$comic->title}}</h2>
                 <div class="diff">
                     <div>
-                        <p class="green"><span>U.S. price: </span> {{$comic['price']}}</p>
+                        <p class="green"><span>U.S. price: </span> {{$comic->price}}</p>
                         <p class="text-diff"><span>Available</span></p>
                     </div>
                     <p>Check Availability</p>
                 </div>
-                <p class="story">{{$comic['description']}}</p>
+                <p class="story">{{$comic->description}}</p>
                 </div>
                 <div class="right">
                     <p class="top-img">advertisement</p>
@@ -65,8 +63,6 @@
                     </div>
                 </div>
             </div>
-        @endif
-    @endforeach
     <div class="info">
       <ul>
         @foreach ($menu as $button)
