@@ -27,10 +27,10 @@
                 <div class="width-diff">
                     <h3>Talent</h3>
                     <div>
-                        <div class="divider">
+                        {{-- <div class="divider">
                             <p>Art By:</p>
                             <p class="width-diff-two">
-                                @foreach ($comic['artists'] as $draw)
+                                @foreach ($comic->artists as $draw)
                                     <span><a href="">{{$draw}}</a>,</span>
                                 @endforeach
                             </p>
@@ -38,11 +38,11 @@
                         <div class="divider">
                             <p>Written By:</p>
                             <p class="width-diff-two">
-                                @foreach ($comic['writers'] as $write)
+                                @foreach ($comic->writers as $write)
                                     <span><a href="">{{$write}}</a>,</span>
                                 @endforeach
                             </p>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="width-diff">

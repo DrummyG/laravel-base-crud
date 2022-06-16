@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ComicController@index')->name('home');
 
-Route::get('/super', function () {
-    $menu = config('menu');
-    return view('show', ['menu' => $menu]);
-})->name('super');
+Route::get('/show', 'ComicController@show')->name('show');
+
+Route::get('/delete', function () {
+    return view('delete');
+})->name('delete');
