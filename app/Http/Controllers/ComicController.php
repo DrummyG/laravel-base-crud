@@ -19,6 +19,14 @@ class ComicController extends Controller
         return view('welcome', compact('comics'), compact('menu'));
     }
 
+    protected $validationRules = [
+        'title' => 'required|max:20',
+        'thumb' => 'required',
+        'description' => 'required|max:200',
+        'price' => 'required|max:6',
+        'sale_date' => 'required|max:10',
+    ];
+
     /**
      * Show the form for creating a new resource.
      *
@@ -38,6 +46,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $request->validate($this->validationRules);
       
         $newComic = Comic::create($data);
 
